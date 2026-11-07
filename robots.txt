@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /messages.html
+Disallow: /profile.html
+
+Sitemap: https://ahmedhassanhamed.github.io/shabaka/sitemap.xml

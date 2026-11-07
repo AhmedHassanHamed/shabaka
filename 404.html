@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="referrer" content="no-referrer" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'"
+    />
+    <title>404 | شبكة Shabaka</title>
+    <style>
+      :root {
+        --bg: #f7f8f6;
+        --ink: #14231f;
+        --mut: #566761;
+        --pri: #0e6b57;
+        --on: #fff;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #0c1512;
+          --ink: #e8efeb;
+          --mut: #9fb0a8;
+          --pri: #3fc2a1;
+          --on: #08130f;
+        }
+      }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          400 18px/1.8 system-ui,
+          "Segoe UI",
+          Tahoma,
+          sans-serif;
+        text-align: center;
+        padding: 24px;
+      }
+      h1 {
+        font-size: 72px;
+        margin: 8px 0 0;
+        color: var(--pri);
+        line-height: 1.1;
+      }
+      p {
+        color: var(--mut);
+        margin: 6px 0;
+      }
+      a {
+        display: inline-block;
+        margin-top: 18px;
+        background: var(--pri);
+        color: var(--on);
+        padding: 10px 26px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      a:focus-visible {
+        outline: 3px solid #e8a317;
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <svg
+        width="72"
+        height="72"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 64 64"
+        role="img"
+        aria-label="Shabaka"
+      >
+        <rect width="64" height="64" rx="14" fill="#0e6b57" />
+        <g stroke="#fff" stroke-width="3" stroke-linecap="round">
+          <path d="M20 22H44M20 22L32 46M44 22L32 46" />
+        </g>
+        <circle cx="20" cy="22" r="6" fill="#fff" />
+        <circle cx="44" cy="22" r="6" fill="#fff" />
+        <circle cx="32" cy="46" r="7" fill="#e8a317" />
+      </svg>
+
+      <h1>404</h1>
+      <p>الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</p>
+      <p lang="en" dir="ltr">
+        The page you are looking for does not exist or has moved.
+      </p>
+      <a href="https://ahmedhassanhamed.github.io/shabaka/"
+        >العودة إلى شبكة / Back to Shabaka</a
+      >
+    </main>
+  </body>
+</html>

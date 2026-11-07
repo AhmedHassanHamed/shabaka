@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>التقييمات | شبكة Shabaka</title>
+    <meta
+      name="description"
+      content="تقييمات حقيقية لموقع شبكة وللمستقلين من أصحاب مشاريع أتمّوا أعمالهم عبرنا."
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0e6b57" />
+    <link
+      rel="canonical"
+      href="https://ahmedhassanhamed.github.io/shabaka/reviews.html"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; connect-src https://*.supabase.co; base-uri 'none'; form-action 'none'; object-src 'none'"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="sub">
+      <div class="w">
+        <a class="logo" href="index.html"
+          ><img src="assets/logo.svg" alt="" width="34" height="34" /><span
+            >شبكة</span
+          ></a
+        >
+        <nav aria-label="Main">
+          <a href="index.html">الرئيسية</a><a href="community.html">المجتمع</a
+          ><a href="messages.html">الرسائل</a><a href="profile.html">ملفي</a>
+        </nav>
+      </div>
+    </header>
+    <main class="pg">
+      <section>
+        <div class="w">
+          <h1>التقييمات</h1>
+          <p class="sub">
+            تقييم المستقل يكتبه صاحب المشروع بعد اكتمال مشروعه عبر شبكة، ويُنشر
+            بعد مراجعة تقتصر على الإساءة والبيانات الشخصية. لا نحذف تقييمًا لأنه
+            منخفض.
+          </p>
+
+          <h2>تقييمات المستقلين</h2>
+          <div class="bands" id="chips"></div>
+          <div class="stack mt" id="fl" aria-live="polite"></div>
+
+          <h2 class="mt">تقييمات الموقع</h2>
+          <p class="sub" id="ss"></p>
+          <div class="stack" id="sl"></div>
+
+          <h2 class="mt">قيّم تجربتك</h2>
+          <div class="c" id="lg" hidden>
+            <h3>سجّل الدخول</h3>
+            <p>
+              التقييم متاح لأصحاب المشاريع والمستقلين المسجلين عندنا. ادخل
+              ببريدك وكلمة المرور.
+            </p>
+            <form id="lf">
+              <div class="fld">
+                <label for="em">البريد الإلكتروني</label
+                ><input
+                  id="em"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  dir="ltr"
+                />
+              </div>
+              <div class="fld">
+                <label for="pw">كلمة المرور</label
+                ><input
+                  id="pw"
+                  type="password"
+                  autocomplete="current-password"
+                  minlength="8"
+                  required
+                />
+              </div>
+              <button class="btn" type="submit">دخول</button>
+            </form>
+            <p class="tk" id="lm" role="status"></p>
+          </div>
+
+          <div class="stack" id="fm" hidden>
+            <div class="c" id="ff-box" hidden>
+              <h3>قيّم مستقلًا أتمّ مشروعك</h3>
+              <form id="ff">
+                <div class="fld">
+                  <label for="fc">المشروع</label
+                  ><select id="fc" required></select>
+                </div>
+                <div class="fld">
+                  <label for="fn">اسم العرض</label
+                  ><input
+                    id="fn"
+                    minlength="2"
+                    maxlength="40"
+                    required
+                    autocomplete="nickname"
+                  />
+                </div>
+                <div class="fld">
+                  <label for="fr">التقييم</label
+                  ><select id="fr" required></select>
+                </div>
+                <div class="fld">
+                  <label for="fx">رأيك</label
+                  ><textarea
+                    id="fx"
+                    minlength="10"
+                    maxlength="500"
+                    required
+                  ></textarea>
+                  <small class="tk"
+                    >لا تكتب أرقام هواتف أو إيميلات أو بيانات شخصية.</small
+                  >
+                </div>
+                <button class="btn" type="submit">إرسال للمراجعة</button>
+                <p class="tk" id="fm1" role="status"></p>
+              </form>
+            </div>
+            <p class="note" id="ff-none" hidden>
+              تقييم المستقل يتاح بعد اكتمال مشروعك واعتماده من شبكة.
+            </p>
+
+            <div class="c" id="sf-box" hidden>
+              <h3>قيّم موقع شبكة</h3>
+              <form id="sf">
+                <div class="fld">
+                  <label for="sn">اسم العرض</label
+                  ><input
+                    id="sn"
+                    minlength="2"
+                    maxlength="40"
+                    required
+                    autocomplete="nickname"
+                  />
+                </div>
+                <div class="fld">
+                  <label for="sr">التقييم</label
+                  ><select id="sr" required></select>
+                </div>
+                <div class="fld">
+                  <label for="sx">رأيك</label
+                  ><textarea
+                    id="sx"
+                    minlength="10"
+                    maxlength="500"
+                    required
+                  ></textarea>
+                </div>
+                <button class="btn" type="submit">إرسال للمراجعة</button>
+                <p class="tk" id="fm2" role="status"></p>
+              </form>
+            </div>
+            <p class="note" id="sf-done" hidden></p>
+            <button class="link" id="out" type="button">تسجيل الخروج</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="w">
+        <p>التقييمات تعبّر عن آراء أصحابها ولا تتحمل شبكة مسؤوليتها.</p>
+      </div>
+    </footer>
+    <noscript><p class="ns">يتطلب هذا الموقع JavaScript.</p></noscript>
+    <script src="js/chat-config.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/reviews.js"></script>
+  </body>
+</html>

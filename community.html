@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>المجتمع | شبكة Shabaka</title>
+    <meta
+      name="description"
+      content="اكتب الخدمة التي تحتاجها ولا تجدها، وصوّت على طلبات الآخرين. نرتب الأولويات حسب التصويت."
+    />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0e6b57" />
+    <link
+      rel="canonical"
+      href="https://ahmedhassanhamed.github.io/shabaka/community.html"
+    />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; img-src 'self' data:; connect-src https://*.supabase.co; base-uri 'none'; form-action 'none'; object-src 'none'"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="sub">
+      <div class="w">
+        <a class="logo" href="index.html"
+          ><img src="assets/logo.svg" alt="" width="34" height="34" /><span
+            >شبكة</span
+          ></a
+        >
+        <nav aria-label="Main">
+          <a href="index.html">الرئيسية</a><a href="reviews.html">التقييمات</a
+          ><a href="messages.html">الرسائل</a><a href="profile.html">ملفي</a>
+        </nav>
+      </div>
+    </header>
+    <main class="pg">
+      <section>
+        <div class="w">
+          <h1>مجتمع شبكة</h1>
+          <p class="sub">
+            خدمة تحتاجها ولا تجدها؟ اكتبها هنا، وصوّت على طلبات غيرك. نرتّب
+            الأولويات بالتصويت ونحاول توفير مستقلين لأكثر الطلبات.
+          </p>
+
+          <div class="c" id="lg" hidden>
+            <h3>سجّل الدخول للمشاركة</h3>
+            <p>
+              القراءة متاحة للجميع. للكتابة أو التصويت سجّل الدخول أو أنشئ
+              حسابًا جديدًا ببريدك وكلمة مرور.
+            </p>
+            <form id="lf">
+              <div class="fld">
+                <label for="em">البريد الإلكتروني</label
+                ><input
+                  id="em"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  dir="ltr"
+                />
+              </div>
+              <div class="fld">
+                <label for="pw">كلمة المرور</label
+                ><input
+                  id="pw"
+                  type="password"
+                  autocomplete="current-password"
+                  minlength="8"
+                  required
+                />
+              </div>
+              <button class="btn" type="submit">دخول</button>
+              <button class="btn o" type="button" id="su">
+                إنشاء حساب جديد
+              </button>
+            </form>
+            <p class="tk" id="lm" role="status"></p>
+          </div>
+
+          <div class="c" id="pf-box" hidden>
+            <h3>اكتب طلبك</h3>
+            <form id="pf">
+              <div class="fld">
+                <label for="pn">اسم العرض (يظهر للجميع)</label
+                ><input
+                  id="pn"
+                  maxlength="40"
+                  minlength="2"
+                  required
+                  autocomplete="nickname"
+                />
+              </div>
+              <div class="fld">
+                <label for="pc">الفئة</label
+                ><select id="pc" required></select>
+              </div>
+              <div class="fld">
+                <label for="pt">عنوان الطلب</label
+                ><input id="pt" maxlength="80" minlength="5" required />
+              </div>
+              <div class="fld">
+                <label for="pbud">الميزانية</label
+                ><select id="pbud"></select>
+              </div>
+              <div class="fld">
+                <label for="pdur">المدة المطلوبة</label
+                ><select id="pdur"></select>
+              </div>
+              <div class="fld">
+                <label for="pd">التفاصيل</label
+                ><textarea
+                  id="pd"
+                  maxlength="600"
+                  minlength="20"
+                  required
+                ></textarea>
+                <small class="tk"
+                  >لا تكتب أرقام هواتف أو إيميلات أو بيانات شخصية. المشاركات
+                  تُراجع قبل النشر.</small
+                >
+              </div>
+              <button class="btn" type="submit" id="pb">إرسال للمراجعة</button>
+              <p class="tk" id="pm" role="status"></p>
+            </form>
+            <div id="mine"></div>
+            <button class="link" id="out" type="button">تسجيل الخروج</button>
+          </div>
+
+          <div class="mt">
+            <label for="flt" class="tk">تصفية حسب الفئة</label>
+            <select id="flt"></select>
+          </div>
+          <div class="stack mt" id="ls" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="w">
+        <p>
+          المحتوى من مشاركات الأعضاء ولا تتحمل شبكة مسؤوليته. بلّغنا عن أي
+          مشاركة مسيئة من صفحة الرئيسية.
+        </p>
+      </div>
+    </footer>
+    <noscript><p class="ns">يتطلب هذا الموقع JavaScript.</p></noscript>
+    <script src="js/chat-config.js"></script>
+    <script src="js/shell.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/community.js"></script>
+  </body>
+</html>
